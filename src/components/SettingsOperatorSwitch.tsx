@@ -22,7 +22,7 @@ export function SettingsOperatorSwitch({
         setIsOwned(!isOwned);
         localStorage.setItem(name, (!isOwned).toString());
       }}
-      className="cursor-pointer flex flex-row gap-2 items-center justify-between bg-myRed rounded-full px-8 py-2"
+      className="font-bold cursor-pointer flex flex-row gap-2 items-center justify-between bg-myRed rounded-full px-8 py-2"
     >
       <img src={icon} className="h-24" />
       <p className="text-white font-bold">{name}</p>

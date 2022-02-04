@@ -26,7 +26,7 @@ export function SettingsView({
         {operators
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((e) => (
-            <SettingsOperatorSwitch {...e} />
+            <SettingsOperatorSwitch key={e.character} {...e} />
           ))}
       </div>
     </div>
