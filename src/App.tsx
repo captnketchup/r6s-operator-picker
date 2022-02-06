@@ -33,7 +33,6 @@ function App() {
         .filter((e) => ownOperators.some((oe) => oe.name === e.name && oe.value === true))
     )
   }, [displayedOps.selected, opType, settingsPanel])
-
   let ownOperators: any[] = []
 
   Object.keys(localStorage).forEach(function (key) {
@@ -48,9 +47,9 @@ function App() {
     }
   })
   return (
-    <div className="w-full h-full ">
+    <div className="w-full h-full bg-blue-900">
       {!settingsPanel && (
-        <div className="bg-blue-900 px-4 py-8 min-h-screen">
+        <div className=" px-4 py-8 min-h-screen max-w-6xl mx-auto">
           <div className="flex flex-row justify-between items-center">
             <h1 className="text-5xl text-white font-bold capitalize">R6S operator picker</h1>
             <p
@@ -66,7 +65,7 @@ function App() {
             setDisplayedOps={setDisplayedOps}
           />
           <OpTypeSwitch opType={opType} setOpType={setOpType} />
-          <div className="grid grid-cols-3 sm:grid-cols-5 gap-8">
+          <div className="grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-6 gap-8">
             {asd
               .filter((e) =>
                 displayedOps.selected !== "" ? e.name === displayedOps.selected : true
