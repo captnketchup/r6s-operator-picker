@@ -1,16 +1,13 @@
-import { IOperator } from "../operators/IOperator";
-import { SettingsOperatorSwitch } from "./SettingsOperatorSwitch";
+import { IOperator } from "../operators/IOperator"
+import { SettingsOperatorSwitch } from "./SettingsOperatorSwitch"
 
 type SettingsViewProps = {
-  isSettings: boolean;
-  operators: IOperator[];
-  setSettingsPanel: React.Dispatch<React.SetStateAction<boolean>>;
-};
+  isSettings: boolean
+  operators: IOperator[]
+  setSettingsPanel: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-export function SettingsView({
-  operators,
-  setSettingsPanel,
-}: SettingsViewProps) {
+export function SettingsView({ operators, setSettingsPanel }: SettingsViewProps) {
   return (
     <div className="bg-myPurple w-full h-full px-4 py-8">
       <div className="flex flex-row justify-between items-center">
@@ -30,5 +27,5 @@ export function SettingsView({
           ))}
       </div>
     </div>
-  );
+  )
 }

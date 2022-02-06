@@ -32,8 +32,7 @@ function App() {
         .filter((e) => (opType !== "" ? e.type === opType : e.type !== undefined))
         .filter((e) => ownOperators.some((oe) => oe.name === e.name && oe.value === true))
     )
-  }, [displayedOps.selected, opType])
-
+  }, [displayedOps.selected, opType, settingsPanel])
   let ownOperators: any[] = []
 
   Object.keys(localStorage).forEach(function (key) {
